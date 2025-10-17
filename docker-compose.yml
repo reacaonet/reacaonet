@@ -1,0 +1,14 @@
+
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: reacaonet-app
+    ports:
+      - "4173:4173"
+    environment:
+      - NODE_ENV=production
+      - PORT=4173
+      - HOST=0.0.0.0
+    volumes: []
+    restart: unless-stopped
